@@ -3,6 +3,7 @@
 # dependencies
 /node_modules/
 first_AngularApp/node_modules/
+TS_Basics/node_modules/
 admin/node_modules/
 /.pnp
 .pnp.js
