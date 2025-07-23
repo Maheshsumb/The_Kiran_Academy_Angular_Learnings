@@ -1,0 +1,56 @@
+<h1>Data Binding</h1>
+<h2>String Interpolation</h2>
+<p>Transfer Data from TS to HTML</p>
+<p>Data Should be in text format</p>
+<p ngNonBindable>use {{}} to bind data</p>
+<h3>Hello {{ fname }}</h3>
+<h4>Hi, {{ user.name }} your id is{{ user.id }}</h4>
+
+<hr />
+<hr />
+
+<h2>Property Binding</h2>
+<p>Transfer Data from TS to HTML</p>
+<p>Data Should be in text format</p>
+<p>use [] to bind data</p>
+
+<input type="text" name="fname" [value]="fname" />
+<br /><br />
+<input type="number" name="id" [value]="user.id" />
+
+<hr />
+<hr />
+
+<h2>Event Binding</h2>
+<p>Transfer Data from HTML to TS</p>
+<p>Generally used for call function as per event</p>
+<p>use () to bind data</p>
+<button (click)="greet()">Click Me</button>
+<br />
+<br />
+<input type="text" name="fname" (keyup.enter)="f1($event)" />
+<br />
+<br />
+<select name="number" id="n" (change)="changeNum($event)">
+  <option value="1">One</option>
+  <option value="2">Two</option>
+</select>
+
+<hr />
+<hr />
+
+<h2>Two Way Data Binding</h2>
+<p>Combination of property and event binding</p>
+<p>Transfer Data from TS to HTML and HTML to TS</p>
+<p>Data should be in text format</p>
+<p>use [(ngModel)] to bind data</p>
+<p style="color: red">
+  <b>NOTE:</b>
+  <li>
+    <i>Use ngModel to achieve 2 way data binding</i>
+  </li>
+  <li><i>to use ngModel import FormsModule in add.module.ts</i></li>
+</p>
+
+<input type="text" name="user" [(ngModel)]="username" />
+<i>{{ username }}</i>
