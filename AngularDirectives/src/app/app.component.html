@@ -1,0 +1,43 @@
+<h1>Directives</h1>
+
+<h2>Structural Directives</h2>
+<h3>1. ngIf</h3>
+
+<button (click)="changeVisibility()">{{ btnTxt }}</button>
+<p *ngIf="isVisible">&nbsp;&nbsp; -- This is example of ngIf</p>
+
+<hr />
+<h3>2. ngFor</h3>
+<ul *ngFor="let r of rolls">
+  <li>{{ r }}</li>
+</ul>
+
+<table border="1px " *ngIf="student.length > 0">
+  <tr>
+    <th>Roll No</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let i of student">
+    <td>{{ i.rollNo }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.age }}</td>
+  </tr>
+</table>
+
+<div *ngIf="student.length == 0">No Data Found</div>
+<hr />
+<h3>3. ngSwitch</h3>
+<button (click)="one()">Login</button>
+<button (click)="two()">Register</button>
+<div [ngSwitch]="num">
+  <div *ngSwitchCase="1">
+    <h4>Login</h4>
+    Username: <input type="text" /> <br /><br />Password: <input type="text" />
+  </div>
+  <div *ngSwitchCase="2">
+    <h4>Registration</h4>
+    Username: <input type="text" /> <br /><br />Password:
+    <input type="password" /><br /><br />Email Id: <input type="text" />
+  </div>
+</div>
