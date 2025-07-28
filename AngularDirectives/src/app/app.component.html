@@ -1,5 +1,48 @@
 <h1>Directives</h1>
 
+<h2>Attribute Directives</h2>
+<p>
+  Attribute directives are used to add or modify attributes on an element. They
+  are used to add attributes that are not part of the standard HTML attributes,
+  or to modify the value of an existing attribute.
+</p>
+<h3>1. ngStyle</h3>
+<select name="textColor" [(ngModel)]="textColor">
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+  <option value="black">Black</option>
+</select>
+
+<h4 [ngStyle]="{ color: textColor }">This is Example of ngStyle</h4>
+
+<form action="">
+  Username:
+  <input type="text" name="username" [(ngModel)]="username" /><br /><br />
+  Password:
+  <input type="password" name="password" [(ngModel)]="password" /><br /><br />
+  <button type="submit" (click)="login()">Submit</button>
+</form>
+<h6 [ngStyle]="{ color: textColor }">{{ textMsg }}</h6>
+
+<hr />
+<h3>2. ngClass</h3>
+<div [ngClass]="{ primary: isPrimary, secondary: !isPrimary }">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quidem
+    corporis! Esse rem et sint eum maiores nemo repellat quibusdam amet ut neque
+    tenetur ad, vel, quae nisi est beatae.
+  </p>
+</div>
+<br />
+<div [ngClass]="getClassName()">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non incidunt earum
+    debitis corporis exercitationem asperiores quae modi. Sunt optio velit vitae
+    repellat eveniet soluta, ab sed possimus repellendus doloribus dolor.
+  </p>
+</div>
+
 <h2>Structural Directives</h2>
 <h3>1. ngIf</h3>
 

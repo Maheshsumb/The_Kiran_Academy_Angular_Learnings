@@ -54,4 +54,43 @@ export class AppComponent {
   two() {
     this.num = 2
   }
+
+
+  // Attribute Directives
+  textRed = 'red'
+  textYellow = 'yellow'
+  textColor = 'cyan'
+
+  username = ''
+  password = ''
+  textMsg = ''
+  login() {
+    if (this.username != 'ram') {
+
+      this.textColor = 'blue'
+      this.textMsg = 'Invalid Username'
+      console.log(this.username, "\t ", this.password, "\t", this.textColor)
+    }
+    if (this.password != '123') {
+      this.textColor = 'red'
+      this.textMsg = 'Invalid Password'
+      console.log(this.username, this.password, this.textColor)
+    }
+    if (this.username === 'ram' && this.password === '123') {
+      this.textColor = 'green'
+      this.textMsg = 'Login Success'
+      console.log(this.username, this.password, this.textColor)
+      alert("okk")
+    }
+
+  }
+  isPrimary = false;
+
+  getClassName() {
+    if (this.isPrimary) return 'primary'
+    return 'secondary'
+  }
+
+
+
 }
