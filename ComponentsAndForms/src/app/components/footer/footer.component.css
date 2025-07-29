@@ -1,0 +1,42 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+
+      .footer {
+        background: #2d3748;
+        color: #cbd5e0;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 14px;
+        margin-top: auto;
+      }
+
+      .footer p {
+        margin: 0;
+        font-weight: 400;
+      }
+
+      .footer .copyright-symbol {
+        font-size: 16px;
+        margin-right: 4px;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .footer {
+          padding: 16px 20px;
+          font-size: 13px;
+        }
+
+        .demo-text h1 {
+          font-size: 2rem;
+        }
+
+        .demo-text p {
+          font-size: 1rem;
+        }
+      }
