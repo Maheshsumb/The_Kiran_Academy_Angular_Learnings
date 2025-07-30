@@ -1,1 +1,39 @@
-<p>register works!</p>
+<h2>Register</h2>
+
+<form [formGroup]="user" (ngSubmit)="register()">
+  Username:
+  <input type="text" name="username" formControlName="username" /><br />
+  <p
+    style="color: red"
+    *ngIf="user.get('username')?.touched && user.get('username')?.invalid"
+  >
+    Invalid Username
+  </p>
+  <br />
+  Password:
+  <input type="password" name="password" formControlName="password" /><br />
+  <p
+    style="color: red"
+    *ngIf="user.get('password')?.touched && user.get('password')?.invalid"
+  >
+    Invalid Password
+  </p>
+  <br />
+  age: <input type="number" name="age" formControlName="age" /><br />
+  <p
+    style="color: red"
+    *ngIf="user.get('age')?.touched && user.get('age')?.invalid"
+  >
+    Invalid Age
+  </p>
+  <br />
+  Email: <input type="email" name="email" formControlName="email" /><br />
+  <p
+    style="color: red"
+    *ngIf="user.get('email')?.touched && user.get('email')?.invalid"
+  >
+    Invalid Email
+  </p>
+  <br />
+  <button type="submit">Register</button>
+</form>

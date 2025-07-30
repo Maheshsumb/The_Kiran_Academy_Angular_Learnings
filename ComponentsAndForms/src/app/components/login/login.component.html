@@ -1,1 +1,9 @@
-<p>login works!</p>
+<h2>Login Form using Template Driven</h2>
+
+<form action="">
+  <label for="username">Username:</label
+  ><input type="text" name="username" [(ngModel)]="username" /> <br /><br />
+  <label for="password">Password:</label
+  ><input type="password" name="password" [(ngModel)]="password" /> <br /><br />
+  <button (click)="login()">Login</button>
+</form>
